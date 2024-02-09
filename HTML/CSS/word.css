@@ -1,0 +1,16 @@
+.para{
+    border: 1pxsolid;
+    width: 50px;
+    word-break: break-word;
+}
+
+.div{
+    word-spacing: 10px;
+}
+
+
+p::selection{
+    color: aquamarine;
+    background-color: chocolate;
+    vertical-align: middle;
+}

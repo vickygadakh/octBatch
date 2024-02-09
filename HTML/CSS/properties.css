@@ -1,0 +1,41 @@
+
+.parent{
+    height: 700px;
+    width: 700px;
+    background-color: rgb(36, 11, 202);
+}
+
+.heading-section{
+    color: tomato;
+}
+.para-section{
+    color: rgb(24, 24, 3);
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+}
+.h3-container{
+    color: azure;
+}
+h1{
+    color: aqua;
+    font-size: 40px;
+}
+.h1-container{
+    color: blueviolet;
+    background-color: blue;
+}
+
+div.parent div h3.h3-container{
+    background-color: blueviolet;
+}
+
+/*  id selector */
+#h2-container{
+    border: 4px solid violet;
+    width: 300px;
+}
+
+/* universal selector 
+*{
+    background-color: aquamarine;
+} */

@@ -1,0 +1,33 @@
+
+
+/* external css
+1. element selector
+2.class selector */
+
+pre{
+    color: yellowgreen;
+    font-size: 20px;
+}
+
+/* class selector
+class name :.(period operater)classname(space'special character
+(char except -)
+first letter of class name integer are not allowed
+e.g.
+.heading3-container{
+    property : value;
+s} */
+
+.h3-container{
+    color:green;
+    font-size: 25px;
+}
+
+.para-container{
+    background-color: rgb(53, 11, 120);
+    width: 400px;
+    border: 1px dashed rebeccapurple;
+    color: rgb(234, 23, 34);
+    text-align: center;
+    margin: auto;
+}
