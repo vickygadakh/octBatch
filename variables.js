@@ -19,3 +19,5 @@ name = "vicky" ; //defination
 console.log(name);
 
 let sName = "gadakh" //declaration + defination
+
+let empAge = 90;
