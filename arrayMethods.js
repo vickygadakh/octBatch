@@ -30,5 +30,30 @@ console.log(fruits3.join(" "));
 
 console.log(fruits2.concat(fruits3));
 
+const fruits4 = ["Banana","Orange","Apple","Mango"];
+
+delete fruits4[6];
+
+console.log(">>>>>>>",fruits4);
+
+const fruits5 = ["Banana","Orange","Apple","Mango","Orange"];
+fruits5.splice(2, 3, "Lemon","Kiwi");
+console.log(">>>>>>>",fruits5);
+
+const fruits6 = ["Banana","Orange","Apple","Mango","Orange"];
+
+console.log(fruits6.slice(0,3));
+
+//number method
+
+let a = 9090909;
+let b = a.toString();
+
+console.log(a.valueOf());
+
+let x = 9.6566666;
+let y = x.toFixed(2);
+console.log(y);
+
 
 
