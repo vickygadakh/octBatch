@@ -1,6 +1,7 @@
 
 var marks = 85;
 
+function conditions(){
 //if
 if (marks > 75) {
     console.log("Distinction");
@@ -13,6 +14,12 @@ if (marks > 35) {
     console.log("fail");
 }
 
+//ternory operator cond  ? T : F
+
+marks > 35 ? console.log("pass") : console.log("fail") ; ;
+}
+
+function multipleCondition(){
 //else if : multiple
 if (marks >= 75) {
     console.log("disti");
@@ -47,7 +54,9 @@ switch (amount) {
     default:
         console.log("dont have money");
 }
+}
 
+function logicalOperators(){
 let a = 90; //assgment operator
 
 b = 80;
@@ -119,11 +128,19 @@ let y = 20;
 if(x== 50 || y !=20 || y > 10 ) {
     console.log("jhgf");
 }
-
-if(empAge >= 18 && empAge <= 60){
-    console.log("legel emp");
 }
 
+function test(){
+    console.log("fun calling");
+}
+
+function userName(userName){
+    console.log(userName);
+}
+
+function userPassword(userPass){
+    console.log(userPass);
+}
 
 
 
