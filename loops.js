@@ -67,3 +67,27 @@ for(let a in stud){
   console.log(stud[a]); //stud[name]>> vicky
 }
 
+let g = 5;
+do{
+    console.log(g);
+    g++;
+} while (g<6);
+
+let v = "999999";
+let r = parseInt(v);
+console.log(r);
+
+let a = {
+    "employees":[
+      {"firstName":"John", "lastName":"Doe"},
+      {"firstName":"Anna", "lastName":"Smith"},
+      {"firstName":"Peter", "lastName":"Jones"}
+    ],
+    city:"pune",
+    no :[222,22,222],
+    status:true
+    }
+    let r1 = JSON.stringify(a)
+    console.log(r1);
+    let r2 = JSON.parse(r1);
+    console.log(r2);
