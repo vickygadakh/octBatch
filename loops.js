@@ -91,3 +91,31 @@ let a = {
     console.log(r1);
     let r2 = JSON.parse(r1);
     console.log(r2);
+
+    let g5 = {name : {name:"vick"}}
+    console.log(g5.name.name);
+
+    //arrow function reduce the size of the code.
+    //the return statement and function brackets are optional for single line function
+    //it increase the readability of the code.
+
+    function test(){
+        return "vicky";
+    }
+
+    test = function(){
+        return "vicky";
+    }
+
+    test = () =>{
+        return "vicky"
+    }
+
+    test = () => "vicky";
+
+
+
+
+
+
+
