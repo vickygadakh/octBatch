@@ -10,6 +10,8 @@ or if node module not present in structure create new project again
 to run project always open terminal on project folder : ng serve/ ng s /ng serve
 --open / ng s -o
 
-to resolve powershell unuthorised issue :
+to resolve powershell unuthorised issue : set-executionpolicy -Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 after taking pull my branch if u want to run my code >> npm i then ng s -o
+
+copmo: ng g c home
