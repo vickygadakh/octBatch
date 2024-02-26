@@ -11,3 +11,5 @@ to run project always open terminal on project folder : ng serve/ ng s /ng serve
 --open / ng s -o
 
 to resolve powershell unuthorised issue :
+
+after taking pull my branch if u want to run my code >> npm i then ng s -o
