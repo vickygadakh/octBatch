@@ -6,8 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./directive.component.css']
 })
 export class DirectiveComponent {
-showDiv : Boolean = true;
-
+showDiv : boolean = true;
+listItem = ['COfee','Tea','Milk','COfee','Tea','Milk','COfee','Tea','Milk','COfee','Tea','Milk','COfee','Tea','Milk','COfee','Tea','Milk',];
+color='yellow';
  // Angular 8 directives can be classified in 3 categories based on how they behave:
 
 //Component Directives
