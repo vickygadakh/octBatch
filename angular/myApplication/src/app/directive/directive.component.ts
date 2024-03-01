@@ -9,6 +9,8 @@ export class DirectiveComponent {
 showDiv : boolean = true;
 listItem = ['COfee','Tea','Milk','COfee','Tea','Milk','COfee','Tea','Milk','COfee','Tea','Milk','COfee','Tea','Milk','COfee','Tea','Milk',];
 color='yellow';
+bgColorName:any = 'purple';
+journey:any  ='user';
  // Angular 8 directives can be classified in 3 categories based on how they behave:
 
 //Component Directives
@@ -44,5 +46,8 @@ color='yellow';
 toggle(){
 //this.showDiv = false;
 this.showDiv = !this.showDiv ;
+}
+getColor(){
+  return this.bgColorName;
 }
 }
