@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class UserLoginComponent {
 
+
+  //template driven : form fields are less
+  //reactive form : form fields are more, need custom validation
+
+  login(data:any){
+   console.log(data);
+   
+  }
 }
