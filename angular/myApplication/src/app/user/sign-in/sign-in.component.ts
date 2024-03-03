@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-in',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class SignInComponent {
 
+signUpForm! : FormGroup;
+
+constructor( private formBuilder: FormBuilder){}
 }

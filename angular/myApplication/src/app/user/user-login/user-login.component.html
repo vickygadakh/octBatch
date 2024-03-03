@@ -1,10 +1,11 @@
     <div class="form-container">
     <h2>Login Form</h2>
-
     <form #loginForm ="ngForm">
+        
         <label>UserName</label><br>
+
         <input type="text" #userName="ngModel" ngModel name="uName"
-         required pattern="^[a-zA-Z]*$" minlength="2" maxlength="20" [(ngModel)]="name">
+         required pattern="^[a-zA-Z  ]*$" minlength="2" maxlength="20" [(ngModel)]="name">
 
         <div *ngIf="userName?.errors?.['required'] && userName?.touched"class="error-msg">
             User Name is required
@@ -17,7 +18,9 @@
         </div>
         <br>
         <label>Password</label><br>
-        <input [type]="isShowPass ? 'text' :'Password' " #pass="ngModel" ngModel name="Password" 
+
+        <input [type]="isShowPass ? 'text' :'password' " #pass="ngModel" 
+        ngModel name="password" 
         required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,12}$">
 
         <i class="bi bi-eye-fill eye-icon" (click)="toShowPassword()" *ngIf="isShowPass"></i>
@@ -33,4 +36,5 @@
         <button (click)="login(loginForm.value)"[disabled]="!loginForm.valid">Submit</button><br>
 
     </form>
+    <a routerLink="/user/signUp"> click here to create account</a>
     </div>

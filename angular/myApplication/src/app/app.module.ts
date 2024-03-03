@@ -26,6 +26,6 @@ console.log('app module calling........');
   
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
