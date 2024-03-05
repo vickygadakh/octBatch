@@ -11,4 +11,19 @@ export class SignInComponent {
 signUpForm! : FormGroup;
 
 constructor( private formBuilder: FormBuilder){}
+
+ngOnInit(){
+  this.formDetails();
+}
+
+formDetails(){
+  this.signUpForm = this.formBuilder.group({
+    fullName:[],
+    mob:[],
+    pan:[],
+    pass:[],
+    gender:[],
+    cfnpass:[],
+  })
+}
 }
