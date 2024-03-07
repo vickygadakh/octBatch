@@ -8,7 +8,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class SignInComponent {
 
-signUpForm! : FormGroup;
+signInForm! : FormGroup;
+visible = false;
+isMatch=false;
+visibleConfirm = false;
 
 constructor( private formBuilder: FormBuilder){}
 
@@ -17,13 +20,31 @@ ngOnInit(){
 }
 
 formDetails(){
-  this.signUpForm = this.formBuilder.group({
+  this.signInForm = this.formBuilder.group({
     fullName:['',[Validators.required]],
     mob:[null,[Validators.maxLength(10),Validators.pattern("^[0-9]*$")]],
     pan:[],
-    pass:[],
+    password:[],
     gender:[],
-    cfnpass:[],
+    confirmpass:[],
   })
+}
+
+visiblePassword(){
+  this.visible =!this.visible;
+}
+
+visibleConfirmPassword(){
+  this.visibleConfirm = !this.visibleConfirm;
+}
+
+passMatch(){
+  if(this.signInForm.value.password != null){
+    if(this.signInForm.value.confirmpass == this.signInForm.value.confirmpass) {
+ this.isMatch = false 
+}else{
+this.isMatch= true;
+}
+  }
 }
 }

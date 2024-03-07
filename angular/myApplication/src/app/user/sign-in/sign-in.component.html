@@ -1,54 +1,75 @@
 <div class="form-container">
-    <form [formGroup]="signUpForm">
+    <form [formGroup]="signInForm">
 
         <mat-form-field class="form-fields">
             <mat-label> Full Name</mat-label>
             <input type="text" matInput formControlName="fullName">
-        <mat-hint *ngIf="!signUpForm.get('fullName')?.touched">Please enter your name here</mat-hint>
-        <mat-error *ngIf="signUpForm.get('fullName')?.errors?.['required'] && signUpForm.get('fullName')?.touched" >Full name is required</mat-error>
+        <mat-hint *ngIf="!signInForm.get('fullName')?.touched">Please enter your name here</mat-hint>
+        <mat-error *ngIf="signInForm.get('fullName')?.errors?.['required'] && signInForm.get('fullName')?.touched" >
+            Full name is required</mat-error>
         </mat-form-field>
+
          <br>
         <mat-form-field class="form-fields">
             <mat-label> Mobile Number</mat-label>
             <input type="text" matInput formControlName="mob">
 
             <mat-hint>Please enter your mob no</mat-hint>
-            <mat-error *ngIf="signUpForm.get('mob')?.errors?.['maxlength'] && signUpForm.get('mob')?.touched">
-                mon no should not more than 10 digit
+            <mat-error *ngIf="signInForm.get('mob')?.errors?.['maxlength'] && signInForm.get('mob')?.touched">
+                mob no should not more than 10 digit
             </mat-error>
-            <mat-error *ngIf="signUpForm.get('mob')?.errors?.['pattern'] && signUpForm.get('mob')?.touched
-            && !signUpForm.get('mob')?.errors?.['maxlength']">
+            <mat-error *ngIf="signInForm.get('mob')?.errors?.['pattern'] && signInForm.get('mob')?.touched
+            && !signInForm.get('mob')?.errors?.['maxlength']">
                 Invalid pattern
             </mat-error>
         </mat-form-field>
 
+         <br>
+        <mat-label>Gender</mat-label>
+        <mat-radio-group formControlName="gender">
+            <mat-radio-button>Male</mat-radio-button>
+            <mat-radio-button>Female</mat-radio-button>
+        </mat-radio-group>
+     
+
             <br>
             <mat-form-field class="form-fields">
                 <mat-label> Pancard</mat-label>
+                <mat-hint>Please enter your valid pan no</mat-hint>
                 <input type="text" matInput formControlName="pan">
+                <!-- <mat-error *ngIf="signUpForm.get('pan')?.errors?.['maxlength'] && signUpForm.get('pan')?.touched"></mat-error> -->
+                <!-- <mat-error ngIf="signUpForm.get('pan')?.errors?.[pattern] && signUpForm.get('pan')?.touched -->
+                <!-- && !signUpForm.get('pan')?.errors?.['maxlength']">Invalid pan no</mat-error> -->
             </mat-form-field>
 
            <br>
             <mat-form-field class="form-fields">
                 <mat-label> Password</mat-label>
-                <input type="text" matInput formControlName="pass">
-            </mat-form-field>
-             
-            <br>
-                <mat-label>Gender</mat-label>
-                <mat-radio-group formControlName="gender">
-                    <mat-radio-button>Male</mat-radio-button>
-                    <mat-radio-button>Female</mat-radio-button>
-                </mat-radio-group>
+                <input [type]="visible? 'text' : 'password'" 
+                (keyup)="passMatch()" matInput formControlName="password">
+                <mat-icon matSuffix *ngIf="visible"(click)="visiblePassword()">visibility</mat-icon>
+                <mat-icon matSuffix *ngIf="!visible" (click)="visiblePassword()">visibility_off</mat-icon>
+             </mat-form-field>
+            <mat-error *ngIf="isMatch">Password and Confirm Password should match</mat-error>
+       
              
            <br>
             <mat-form-field class="form-fields">
                 <mat-label> Confirm Password</mat-label>
-                <input type="text" matInput formControlName="cfnpass">
+                <input type="text" [type]="visibleConfirm ? 'text' : 'password'"
+                (keyup)="passMatch()" matInput formControlName="cfnpass">
+                <mat-icon matSuffix *ngIf="visibleConfirm"(click)="visibleConfirmPassword()">visibility</mat-icon>
+                <mat-icon matSuffix *ngIf="!visibleConfirm" (click)="visibleConfirmPassword()">visibility_off</mat-icon>
+          
             </mat-form-field>
 
          <br>
-    <button mat-button color="accent" class="btn">Submit</button>
+    <button mat-raised-button color="accent" class="btn">Submit</button>
  
     </form>
 </div>
+
+
+
+<!-- ['',[Validators.maxLength(13),Validators.pattern("^([a-zA-Z]{5}([0-9]){4}([a-zA-Z]){1}?$")]], -->
+   
