@@ -21,12 +21,13 @@ ngOnInit(){
 
 formDetails(){
   this.signInForm = this.formBuilder.group({
-    fullName:['',[Validators.required]],
-    mob:[null,[Validators.maxLength(10),Validators.pattern("^[0-9]*$")]],
+    fullName:['',[Validators.required, this.whiteSpaceRemoveValidator]],
+    mob:[8208676719,[Validators.maxLength(10),Validators.pattern("^[0-9]*$")]],
     pan:[],
     password:[],
-    gender:[],
+    gender:['male'],
     confirmpass:[],
+    tc:[true,[Validators.requiredTrue]]
   })
 }
 
@@ -46,5 +47,16 @@ passMatch(){
 this.isMatch= true;
 }
   }
+}
+submit(){
+  console.log('this.signIn.value',this.signInForm.value);
+  
+}
+whiteSpaceRemoveValidator(inputBoxValue:any){
+console.log('inp value' ,inputBoxValue);
+let spaceInclude = inputBoxValue?.value?.includes(' ')    //('/\s{1,}/g' , ' ')
+return spaceInclude ? {'whiteSpaceErorr':true} : null
+
+
 }
 }

@@ -7,6 +7,7 @@
         <mat-hint *ngIf="!signInForm.get('fullName')?.touched">Please enter your name here</mat-hint>
         <mat-error *ngIf="signInForm.get('fullName')?.errors?.['required'] && signInForm.get('fullName')?.touched" >
             Full name is required</mat-error>
+        <mat-erorr *ngIf="signInForm.get('fullName')?.errors?.['whiteSpaceErorr']">full name should not include more than one space</mat-erorr>
         </mat-form-field>
 
          <br>
@@ -62,9 +63,13 @@
                 <mat-icon matSuffix *ngIf="!visibleConfirm" (click)="visibleConfirmPassword()">visibility_off</mat-icon>
           
             </mat-form-field>
+            <mat-error *ngIf="isMatch">Password and Confirm Password sholud match</mat-error>
 
          <br>
-    <button mat-raised-button color="accent" class="btn">Submit</button>
+         <input type="checkbox" formControlName="tc"> I agree Terms and condition
+         <br>
+    <button mat-raised-button color="accent" class="btn" (click)="submit()" 
+    [disabled]="!signInForm.valid">Submit</button>
  
     </form>
 </div>
