@@ -1,13 +1,15 @@
 <div class="form-container">
+
     <form [formGroup]="signInForm">
 
         <mat-form-field class="form-fields">
             <mat-label> Full Name</mat-label>
             <input type="text" matInput formControlName="fullName">
+
         <mat-hint *ngIf="!signInForm.get('fullName')?.touched">Please enter your name here</mat-hint>
         <mat-error *ngIf="signInForm.get('fullName')?.errors?.['required'] && signInForm.get('fullName')?.touched" >
             Full name is required</mat-error>
-        <mat-erorr *ngIf="signInForm.get('fullName')?.errors?.['whiteSpaceErorr']">full name should not include more than one space</mat-erorr>
+        <mat-error *ngIf="signInForm.get('fullName')?.errors?.['whiteSpaceErorr']"> fullname should not include more than one space</mat-error>
         </mat-form-field>
 
          <br>
@@ -36,7 +38,8 @@
             <br>
             <mat-form-field class="form-fields">
                 <mat-label> Pancard</mat-label>
-                <mat-hint>Please enter your valid pan no</mat-hint>
+                <mat-hint>
+                    Please enter your valid pan no</mat-hint>
                 <input type="text" matInput formControlName="pan">
                 <!-- <mat-error *ngIf="signUpForm.get('pan')?.errors?.['maxlength'] && signUpForm.get('pan')?.touched"></mat-error> -->
                 <!-- <mat-error ngIf="signUpForm.get('pan')?.errors?.[pattern] && signUpForm.get('pan')?.touched -->

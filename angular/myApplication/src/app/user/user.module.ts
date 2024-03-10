@@ -9,6 +9,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatIconModule} from '@angular/material/icon';
+
 console.log("user module...");
 
 
@@ -16,7 +17,9 @@ console.log("user module...");
 @NgModule({
   declarations: [
     UserLoginComponent,
-    SignInComponent
+    SignInComponent,
+
+
   ],
   imports: [
     CommonModule,
@@ -26,8 +29,11 @@ console.log("user module...");
     MatButtonModule,
     MatInputModule,
     MatRadioModule,
-    MatRadioModule
+    MatRadioModule,
+    MatIconModule,
 
   ]
 })
-export class UserModule { }
+export class UserModule { 
+
+}
