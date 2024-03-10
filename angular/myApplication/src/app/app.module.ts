@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { TestComponent } from './test/test.component';
 import { DirectiveComponent } from './directive/directive.component';
+import { ChildComponent } from './child/child.component';
+import { ParentComponent } from './parent/parent.component';
 console.log('app module calling........');
 
 
@@ -17,7 +19,9 @@ console.log('app module calling........');
     HomeComponent,
     DatabindingComponent,
     TestComponent,
-    DirectiveComponent
+    DirectiveComponent,
+    ChildComponent,
+    ParentComponent
   ],
   imports: [
     BrowserModule,
