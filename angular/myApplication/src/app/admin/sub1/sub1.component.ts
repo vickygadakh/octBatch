@@ -7,7 +7,7 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./sub1.component.css']
 })
 export class Sub1Component {
-  Student = 'Vicky gadakh';
+  Student = 'Vicky gadakh.....';
   constructor(private dataService : DataService){}
 
   sub1(){

@@ -12,7 +12,7 @@ constructor(private dataService :DataService){}
 
 ngOnInit(){
   this.dataService.studentData.subscribe(data=>{
-    this.stdData2.data
+    this.stdData2=data
   })
 }
 }
