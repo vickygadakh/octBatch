@@ -10,6 +10,8 @@ import { TestComponent } from './test/test.component';
 import { DirectiveComponent } from './directive/directive.component';
 import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
+import { PipeComponent } from './pipe/pipe.component';
+import { SearchPipe } from './search.pipe';
 console.log('app module calling........');
 
 
@@ -21,7 +23,9 @@ console.log('app module calling........');
     TestComponent,
     DirectiveComponent,
     ChildComponent,
-    ParentComponent
+    ParentComponent,
+    PipeComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
