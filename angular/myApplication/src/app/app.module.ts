@@ -12,6 +12,7 @@ import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { SearchPipe } from './search.pipe';
+import { SharedModule } from './shared/shared.module';
 console.log('app module calling........');
 
 
@@ -25,12 +26,13 @@ console.log('app module calling........');
     ChildComponent,
     ParentComponent,
     PipeComponent,
-    SearchPipe
+    SearchPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   
   ],
   providers: [],
