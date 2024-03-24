@@ -15,3 +15,13 @@ to resolve powershell unuthorised issue : set-executionpolicy -Set-ExecutionPoli
 after taking pull my branch if u want to run my code >> npm i then ng s -o
 
 copmo: ng g c home
+
+CURD : CREATE update read delet
+create : post -
+API call : import HttpClinentModule into module.ts
+create service : import httpclint class into the service inject its dependancy into 
+constructor .
+create a common function to make API call, return response to the componanat
+
+from componant: call that api call function into a componant with argument 
+subscribe the response given by the server.

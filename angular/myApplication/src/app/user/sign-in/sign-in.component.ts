@@ -53,7 +53,15 @@ this.isMatch= true;
 }
 submit(){
   console.log('this.signInForm.value',this.signInForm.value);
-   this.apiCallService.postApiCall(this.signInForm.value).subscribe(respo=>{
+  let req = {
+    "full_Name" : this.signInForm.value.fullName,
+    "mob_No" : this.signInForm.value.mob,
+    "gender" : this.signInForm.value.gender,
+    "pass"  : this.signInForm.value.password,
+    "confirm_pass" : this.signInForm.value.confirmpass,
+    "terms_cond" : this.signInForm.value.termscondition
+  }
+   this.apiCallService.postApiCall(req).subscribe(respo=>{
     this.router.navigateByUrl('/user/userSucc')
    })
 }
