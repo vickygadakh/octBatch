@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ApiCallService } from 'src/app/api-call.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -13,7 +15,8 @@ visible = false;
 isMatch=false;
 visibleConfirm = false;
 
-constructor( private formBuilder: FormBuilder){}
+constructor( private formBuilder: FormBuilder, 
+  private apiCallService:ApiCallService,private router:Router){}
 
 ngOnInit(){
   this.formDetails();
@@ -40,8 +43,8 @@ visibleConfirmPassword(){
 }
 
 passMatch(){
-  if(this.signInForm.value.password != null){
-    if(this.signInForm.value.confirmpass == this.signInForm.value.confirmpass) {
+  if(this.signInForm.value.confirmpassword != null){
+    if(this.signInForm.value.password == this.signInForm.value.confirmpass) {
  this.isMatch = false 
 }else{
 this.isMatch= true;
@@ -50,7 +53,9 @@ this.isMatch= true;
 }
 submit(){
   console.log('this.signInForm.value',this.signInForm.value);
-
+   this.apiCallService.postApiCall(this.signInForm.value).subscribe(respo=>{
+    this.router.navigateByUrl('/user/userSucc')
+   })
 }
 
 whiteSpaceRemoveValidator(inputBoxValue:any){

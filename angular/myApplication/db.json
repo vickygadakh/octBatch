@@ -1,0 +1,49 @@
+{
+  "admin": [
+    {
+      "id": "1",
+      "name": "pravin",
+      "age": 40,
+      "mob": 9987998799,
+      "city": "mumbai",
+      "stdName": "sayali"
+    },
+    {
+      "id": "2",
+      "name": "rushi",
+      "age": 28,
+      "mob": 8888856688,
+      "city": "sangamner"
+    },
+    {
+      "id": "0b04",
+      "name": "pravin",
+      "age": 40,
+      "mob": 9987998799,
+      "city": "sangali"
+    },
+    {
+      "id": "22f2",
+      "fullName": "Vicky Gadakh",
+      "mob": 8208676719,
+      "pan": "hjhj1234h",
+      "password": "vicky123@",
+      "gender": null,
+      "confirmpass": null,
+      "tc": true
+    },
+    {
+      "id": "f4ba",
+      "fullName": "Rushi Gadakh",
+      "mob": "8287878788",
+      "pan": "ghfy4567d",
+      "password": "rushi4455@",
+      "gender": null,
+      "confirmpass": null,
+      "tc": true
+    }
+  ],
+  "owner": [],
+  "user": {},
+  "students": {}
+}
