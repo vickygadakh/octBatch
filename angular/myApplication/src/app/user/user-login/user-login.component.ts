@@ -48,10 +48,11 @@ console.log(this.userData);
    }
    if(validUser) {
    this.dataService.userName  = data.uName;
+   this.dataService.id = validUser.id;
    this.router.navigateByUrl('/user/userSucc');
    }else{
     this.isValid = true;
-    this.router.navigateByUrl('/user/userLogin');
+    //this.router.navigateByUrl('/user/userLogin');
    }
   }
   toShowPassword(){
